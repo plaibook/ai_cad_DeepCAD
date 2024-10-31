@@ -5,7 +5,10 @@ import h5py
 from joblib import Parallel, delayed
 import argparse
 import sys
-sys.path.append("..")
+# sys.path.append("..")
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from utils import write_ply
 from cadlib.visualize import vec2CADsolid, CADsolid2pc
 

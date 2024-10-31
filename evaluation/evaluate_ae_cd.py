@@ -8,12 +8,16 @@ import random
 from scipy.spatial import cKDTree as KDTree
 import time
 import sys
-sys.path.append("..")
+# sys.path.append("..")
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from utils import read_ply
 from cadlib.visualize import vec2CADsolid, CADsolid2pc
 
 
-PC_ROOT = "../data/pc_cad"
+# PC_ROOT = "../data/pc_cad"
+PC_ROOT = os.path.join(ROOT_DIR, 'data/pc_cad')
 # data that is unable to process
 SKIP_DATA = [""]
 

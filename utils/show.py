@@ -9,7 +9,10 @@ from OCC.Core.TopLoc import TopLoc_Location
 from OCC.Core.BRepCheck import BRepCheck_Analyzer
 import argparse
 import sys
-sys.path.append("..")
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from cadlib.extrude import CADSequence
 from cadlib.visualize import vec2CADsolid, create_CAD
 

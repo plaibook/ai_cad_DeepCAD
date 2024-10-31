@@ -8,12 +8,15 @@ from joblib import Parallel, delayed
 from trimesh.sample import sample_surface
 import argparse
 import sys
-sys.path.append("..")
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from cadlib.extrude import CADSequence
 from cadlib.visualize import CADsolid2pc, create_CAD
 from utils.pc_utils import write_ply, read_ply
 
-DATA_ROOT = "../data"
+DATA_ROOT = os.path.join(ROOT_DIR, 'data')
 RAW_DATA = os.path.join(DATA_ROOT, "cad_json")
 RECORD_FILE = os.path.join(DATA_ROOT, "train_val_test_split.json")
 

@@ -11,15 +11,24 @@ import warnings
 from scipy.stats import entropy
 from sklearn.neighbors import NearestNeighbors
 import sys
-sys.path.append("..")
+# sys.path.append("..")
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
+DATA_ROOT = os.path.join(ROOT_DIR, 'data')
+RAW_DATA = os.path.join(DATA_ROOT, "cad_json")
+PC_ROOT = os.path.join(DATA_ROOT, 'pc_cad')
+RECORD_FILE = os.path.join(DATA_ROOT, "train_val_test_split.json")
+
 from utils import read_ply
 
 N_POINTS = 2000
 
 random.seed(1234)
 
-PC_ROOT = "../data/pc_cad"
-RECORD_FILE = "../data/train_val_test_split.json"
+# PC_ROOT = "../data/pc_cad"
+# RECORD_FILE = "../data/train_val_test_split.json"
+
 
 
 def distChamfer(a, b):

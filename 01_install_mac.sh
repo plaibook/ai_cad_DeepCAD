@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-export ENV_NAME="deep-cad-env"
+export ENV_NAME="ai_cad_deep-cad"
 echo "🥝 Creating $ENV_NAME environment..."
 
 # Deactivate the current environment (if any)

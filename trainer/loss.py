@@ -2,6 +2,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from model.model_utils import _get_padding_mask, _get_visibility_mask
+
+import os
+import sys
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from cadlib.macro import CMD_ARGS_MASK
 
 

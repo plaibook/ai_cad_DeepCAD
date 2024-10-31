@@ -4,11 +4,14 @@ import numpy as np
 import h5py
 from joblib import Parallel, delayed
 import sys
-sys.path.append("..")
+# sys.path.append("..")
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(ROOT_DIR)
+
 from cadlib.extrude import CADSequence
 from cadlib.macro import *
 
-DATA_ROOT = "../data"
+DATA_ROOT = os.path.join(ROOT_DIR, 'data')
 RAW_DATA = os.path.join(DATA_ROOT, "cad_json")
 RECORD_FILE = os.path.join(DATA_ROOT, "train_val_test_split.json")
 
